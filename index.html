@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Fortune Iyoha">
+  <meta name="description" content="Simple todo list app. Built with vanilla JavaScript.">
+  <title>Todo List Creator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="main">
+    <div class="container">
+      <h3 class="main-title">Todo List</h3>
+
+      <form class="form">
+        <label for="task-input">Input your task</label>
+
+        <div class="input-group">
+          <input type="text" id="task-input" name="task" required title="">
+          <button type="submit" id="btn-submit" class="btn btn-submit">Add</button>
+        </div>
+
+        <!-- Information Text -->
+        <span class="info-text"></span>
+      </form>
+
+      <ul id="todo-list" class="todo-list"></ul>
+
+      <!-- <ul id="todo-list" class="todo-list">
+        <li class="todo-item">{text} <button type="submit" class="btn btn-delete">Delete</button></li>
+      </ul> -->
+    </div>
+  </main>
+</body>
+
+</html>
