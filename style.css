@@ -1,4 +1,5 @@
 :root {
+  /* SPACERS */
   --size-100: 0.25rem;
   --size-200: 0.5rem;
   --size-300: 0.75rem;
@@ -8,6 +9,15 @@
   --size-700: 3rem;
   --size-800: 4rem;
   --size-900: 5rem;
+
+  /* COLORS */
+  --clr-primary: #2ba6ee;
+  --clr-accent-1: #ec2f2f;
+  --clr-neutral-100: #ffffff;
+  --clr-neutral-200: #bbb;
+  --clr-neutral-300: #444;
+  --clr-neutral-400: #333;
+  --clr-neutral-500: #3a3a3a;
 }
 
 * {
@@ -17,8 +27,8 @@
 }
 
 body {
-  background-color: #ffffff;
-  color: #444;
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-neutral-300);
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
 }
@@ -29,7 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #333;
+  color: var(--clr-neutral-200);
 }
 
 ul {
@@ -56,7 +66,11 @@ button {
 }
 
 input[type="text"] {
-  border: 1px solid #bbb;
+  border: 0.125rem solid var(--clr-neutral-200);
+  outline: none;
+}
+input[type="text"]:focus {
+  border-color: var(--clr-primary);
 }
 
 /* Utilities */
@@ -68,7 +82,7 @@ input[type="text"] {
 .btn {
   border-color: transparent;
   display: inline-block;
-  color: #ffffff;
+  color: var(--clr-neutral-100);
   cursor: pointer;
 }
 
@@ -76,12 +90,16 @@ input[type="text"] {
   opacity: 0.8;
 }
 
+.btn:focus-visible {
+  outline: 0.125rem solid var(--clr-primary);
+}
+
 .btn-submit {
-  background-color: #3a3a3a;
+  background-color: var(--clr-neutral-500);
 }
 
 .btn-delete {
-  background-color: #ec2f2f;
+  background-color: var(--clr-accent-1);
 }
 
 /* Main Content */
@@ -98,7 +116,7 @@ input[type="text"] {
 }
 
 .main-title {
-  color: #2ba6ee;
+  color: var(--clr-primary);
   font-size: var(--size-600);
 }
 
@@ -111,7 +129,7 @@ input[type="text"] {
 }
 
 .info-text {
-  color: #ec2f2f;
+  color: var(--clr-accent-1);
   font-size: var(--size-400);
   font-weight: bold;
 }
@@ -121,8 +139,8 @@ input[type="text"] {
 }
 
 .todo-item {
-  background-color: #ffffff;
-  border: 1px solid #bbb;
+  background-color: var(--clr-neutral-100);
+  border: 0.0625rem solid var(--clr-neutral-200);
   justify-content: space-between;
   overflow-x: hidden;
   padding: var(--size-200) var(--size-400);
